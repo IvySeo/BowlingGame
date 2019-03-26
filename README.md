@@ -1,15 +1,15 @@
 # BowlingGame
 using C++
 
-#Design Document
+# Design Document
 The bowling program is designed to keep track of a person bowling score and to tally up the score to be displayed a final score at the end of all the user input. This program only supports a single person bowling at a time
 
-#Data Structures and functions:
+# Data Structures and functions:
 Within the program, there are two classes, a bowling class, and a frame class. The frame class is a data holder kind of object. For the private functions and variables, there is an array that is indexed at 21, being the max amount of throws a person can bowl in a single game and a frame counter that is designed to keep track of the current frame that the user is on. There are two booleans functions that return a true or false if a person got a strike or a spare. There are three more private functions where returns an integer from the score depending if the user got a strike or spare. There are four public functions, one of them being the constructor. The constructor just initializes the private two variables to be zero. The getRoll(int) returns the pins that were knocked down for a certain frame. The roll(int pins) is a setter function for setting the pins that were knocked down for that throw. The score() function calculates the score after each frame is played. The roll count is the index for the array rolls[]. The function uses a for loop to iterate through all 10 frames. The loop uses isStrike() and isSpare() functions to calculate the users score if the roll is a strike or a spare. The strikeBonus() function adds 10 points plus the next two rolls to the score and the spareBonus() function will add 10 points plus the next roll to the score. If the user does not get a strike or a spare, the score() function uses the sumOfPins() function to add the two rolls together to calculate the score.
 The bowling class is a wrapper like class the uses the frames class. The bowling has the frame object and the bowlers name. The bowling class is the main driver in the program. This function, StartBowling(), is called in the main.cpp and once started, this will loop asking the user to input the data and displaying the score of that frame on the console after each frame has ended. The StartBowling() has for loop that runs for the first nine frames and after that for loop, there a section of code that enters 10th frame. The 10th frame is special because you have 3 throws if a user gets a strike or spare. At the end of each frame, there is a DisplayBowlingScore() function called the frames scoring calculation function and display the frame is an organized format on the console.
 
  
-#User Document:
+# User Document:
 Bowling score is a console base program that keeps track of the a single person bowling score and displaying their final result at the end and having the program exits and quits. The source code is located at /export/home/cs330/cs330112/Project1/lib. For a user that wants to compile from the source code, they can run the Makefile by typing
 make all
 Or they can compile by typing:
